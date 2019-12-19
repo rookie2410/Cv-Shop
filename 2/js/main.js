@@ -42,18 +42,6 @@ function changeTemplate(toggleType,toggleValue)
 {
 	switch(toggleType)
 	{
-		case 'minor':
-			if(toggleValue=='minorShow')
-			{
-				$('#contentMinor').show();
-				$('#image_box').css('margin-top','35px');
-			}
-			else
-			{
-				$('#contentMinor').hide();
-				$('#image_box').css('margin-top','25px');
-			}
-			break;
 		case 'contact':
 			if(toggleValue=='contact3')
 			{
@@ -75,6 +63,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('#contactLink2').show();
 			}
 			break;
+
 		case 'margin':
 			if(toggleValue=='margin1')
 				$('#page').css('padding','0.2cm 1cm 1cm 1cm');
@@ -89,6 +78,7 @@ function changeTemplate(toggleType,toggleValue)
 			else if(toggleValue=='margin6')
 				$('#page').css('padding','0.2cm 1.5cm 1cm 1.5cm');
 			break;
+
 		case 'line':
 			if(toggleValue=='line1')
 				$('#page').css('line-height','1.1em');
@@ -103,16 +93,6 @@ function changeTemplate(toggleType,toggleValue)
 			else if(toggleValue=='line6')
 				$('#page').css('line-height','1.6em');
 			break;
-		case 'column':
-			if(toggleValue=='column1')
-				$('.table tbody tr td:nth-child(1)').toggleClass('text-center');
-			else if(toggleValue=='column2')
-				$('.table tbody tr td:nth-child(2)').toggleClass('text-center');
-			else if(toggleValue=='column3')
-				$('.table tbody tr td:nth-child(3)').toggleClass('text-center');
-			else if(toggleValue=='column4')
-				$('.table tbody tr td:nth-child(4)').toggleClass('text-center');
-			break;
 
 		case 'font':
 			if(toggleValue=='fontVerdanaSans')
@@ -124,12 +104,14 @@ function changeTemplate(toggleType,toggleValue)
 			else if(toggleValue=='fontDroid')
 				$('#page').removeClass('roboto').removeClass('montserrat').removeClass('verdana-sans').addClass('droid');
 			break;
+
 		case 'case':
 			if(toggleValue=='caseNormal')
 				$('.section-title').removeClass('uppercase');
 			else
 				$('.section-title').addClass('uppercase');
 			break;
+
 		case 'title':
 			if(toggleValue=='titleRuled')
 			{
@@ -142,6 +124,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('.section-title').addClass('shaded');
 			}
 			break;
+			
 		case 'rule':
 			if(toggleValue=='ruleAbove')
 			{
@@ -154,93 +137,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('.section-title').addClass('rule-below');
 			}
 			break;
-
-		case 'image':
-			if(toggleValue=='imageShow')
-			{
-				$('#image_box').show();
-				$('#info').css('margin-left','0px');
-			}
-			else
-			{
-				$('#image_box').hide();
-				$('#info').css('margin-left','20px');
-			}
-			break;
-		case 'roll':
-			if(toggleValue=='rollShow')
-			{
-				$('#contentRoll').show();
-				$('#info').css('margin-top','0px');
-			}
-			else
-			{
-				$('#contentRoll').hide();
-				$('#info').css('margin-top','10px');
-			}
-			break;
-		case 'course':
-			if(toggleValue=='course1')
-			{
-				$('#contentBranch').hide();
-				$('#contentCourse').text('B.Tech - '+$('#contentBranch').text());
-			}
-			else
-			{
-				$('#contentBranch').show();
-				$('#contentCourse').text('B.Tech undergraduate');
-			}
-			break;
-		case 'table':
-			if(toggleValue=='tableShow')
-			{
-				$('#educationTable').removeClass('borderless');
-				$('#educationTable').addClass('customBordered');
-			}
-			else
-			{
-				$('#educationTable').removeClass('customBordered');
-				$('#educationTable').addClass('borderless');
-			}
-			break;
-		case 'edyear':
-			if(toggleValue=='edyearFirst')
-			{
-				$("#educationTable tr").each(function () {
-					$(this).find("td").eq(0).before($(this).find("td").eq(3));
-				});
-				var temp = document.getElementById('column4').className;
-				document.getElementById('column4').className = document.getElementById('column3').className;
-				document.getElementById('column3').className = document.getElementById('column2').className;
-				document.getElementById('column2').className = document.getElementById('column1').className;
-				document.getElementById('column1').className = temp;
-			}
-			else
-			{
-				$("#educationTable tr").each(function () {
-					$(this).find("td").eq(3).after($(this).find("td").eq(0));
-				});
-				var temp = document.getElementById('column1').className;
-				document.getElementById('column1').className = document.getElementById('column2').className;
-				document.getElementById('column2').className = document.getElementById('column3').className;
-				document.getElementById('column3').className = document.getElementById('column4').className;
-				document.getElementById('column4').className = temp;
-			}
-			break;
-		case 'experience':
-			if(toggleValue=='experience1')
-			{
-				$("#sectionExperience .title , #sectionExperience .time").css('display','inline-block');
-				$("#sectionExperience .time").addClass('right').removeClass('tab');
-				$("#sectionExperience .link").show();
-			}
-			else
-			{
-				$("#sectionExperience .title , #sectionExperience .time").css('display','block');
-				$("#sectionExperience .time").removeClass('right').addClass('tab');
-				$("#sectionExperience .link").hide();
-			}
-			break;
+    
 		case 'projects':
 			if(toggleValue=='projects1')
 			{
@@ -317,7 +214,7 @@ function getSelectionContainerElement()
 			range = document.createRange();
 			range.setStart(sel.anchorNode, sel.anchorOffset);
 			range.setEnd(sel.focusNode, sel.focusOffset);
-			// Handle the case when the selection was selected backwards (from the end to the start in the document)
+			// Handle the case when the selection was selected backwards i.e(from the end to the start in the document)
 			if (range.collapsed !== sel.isCollapsed)
 			{
 				range.setStart(sel.focusNode, sel.focusOffset);

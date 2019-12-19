@@ -60,18 +60,6 @@ function changeTemplate(toggleType,toggleValue)
 {
 	switch(toggleType)
 	{
-		case 'minor':
-			if(toggleValue=='minorShow')
-			{
-				$('#contentMinor').show();
-				$('#image_box').css('margin-top','35px');
-			}
-			else
-			{
-				$('#contentMinor').hide();
-				$('#image_box').css('margin-top','25px');
-			}
-			break;
 		case 'contact':
 			if(toggleValue=='contact3')
 			{
@@ -93,6 +81,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('#contactLink2').show();
 			}
 			break;
+
 		case 'margin':
 			if(toggleValue=='margin1')
 				$('#page').css('padding','0.2cm 1cm 1cm 1cm');
@@ -107,6 +96,7 @@ function changeTemplate(toggleType,toggleValue)
 			else if(toggleValue=='margin6')
 				$('#page').css('padding','0.2cm 1.5cm 1cm 1.5cm');
 			break;
+
 		case 'line':
 			if(toggleValue=='line1')
 				$('#page').css('line-height','1.1em');
@@ -121,6 +111,7 @@ function changeTemplate(toggleType,toggleValue)
 			else if(toggleValue=='line6')
 				$('#page').css('line-height','1.6em');
 			break;
+
 		case 'column':
 			if(toggleValue=='column1')
 				$('.table tbody tr td:nth-child(1)').toggleClass('text-center');
@@ -142,12 +133,14 @@ function changeTemplate(toggleType,toggleValue)
 			else if(toggleValue=='fontDroid')
 				$('#page').removeClass('roboto').removeClass('verdana-serif').removeClass('verdana-sans').addClass('droid');
 			break;
+
 		case 'case':
 			if(toggleValue=='caseNormal')
 				$('.section-title').removeClass('uppercase');
 			else
 				$('.section-title').addClass('uppercase');
 			break;
+
 		case 'title':
 			if(toggleValue=='titleRuled')
 			{
@@ -160,6 +153,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('.section-title').addClass('shaded');
 			}
 			break;
+
 		case 'rule':
 			if(toggleValue=='ruleAbove')
 			{
@@ -173,30 +167,6 @@ function changeTemplate(toggleType,toggleValue)
 			}
 			break;
 
-		case 'image':
-			if(toggleValue=='imageShow')
-			{
-				$('#image_box').show();
-				$('#info').css('margin-left','0px');
-			}
-			else
-			{
-				$('#image_box').hide();
-				$('#info').css('margin-left','20px');
-			}
-			break;
-		case 'roll':
-			if(toggleValue=='rollShow')
-			{
-				$('#contentRoll').show();
-				$('#info').css('margin-top','0px');
-			}
-			else
-			{
-				$('#contentRoll').hide();
-				$('#info').css('margin-top','10px');
-			}
-			break;
 		case 'course':
 			if(toggleValue=='course1')
 			{
@@ -209,6 +179,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('#contentCourse').text('B.Tech undergraduate');
 			}
 			break;
+
 		case 'table':
 			if(toggleValue=='tableShow')
 			{
@@ -221,6 +192,7 @@ function changeTemplate(toggleType,toggleValue)
 				$('#educationTable').addClass('borderless');
 			}
 			break;
+
 		case 'edyear':
 			if(toggleValue=='edyearFirst')
 			{
@@ -245,6 +217,7 @@ function changeTemplate(toggleType,toggleValue)
 				document.getElementById('column4').className = temp;
 			}
 			break;
+
 		case 'experience':
 			if(toggleValue=='experience1')
 			{
@@ -259,6 +232,7 @@ function changeTemplate(toggleType,toggleValue)
 				$("#sectionExperience .link").hide();
 			}
 			break;
+
 		case 'projects':
 			if(toggleValue=='projects1')
 			{
@@ -335,7 +309,7 @@ function getSelectionContainerElement()
 			range = document.createRange();
 			range.setStart(sel.anchorNode, sel.anchorOffset);
 			range.setEnd(sel.focusNode, sel.focusOffset);
-			// Handle the case when the selection was selected backwards (from the end to the start in the document)
+			// Handle this case when the selection was selected backwards i.e(from the end to the start in the document)
 			if (range.collapsed !== sel.isCollapsed)
 			{
 				range.setStart(sel.focusNode, sel.focusOffset);

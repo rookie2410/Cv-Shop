@@ -13,22 +13,26 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<meta name="description" content="Online document editor like interface to create and save Resume">
-	<meta name="keywords" content="resume,cv,maker,creator,generator,nitw,warangal,nit warangal,projects,computer science">
+	<meta name="keywords" content="resume,cv,maker,creator,generator,projects,computer science">
 </head>
 
 <body>
 <div class="container-fluid">
 	<div class="row">
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Left Container ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 		<div class="col-sm-3 no-print" id="left">
 			<div id="panel">
 					<h3 class="text-center" data-toggle="modal">Resume</h3>
-					<button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button> 
+             	   <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button>
 				<button class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
 
 				<hr>
 
 				<h4 class="text-center">Template settings</h4>
                 <br>
+<!----------------------------------------Contact Button --------------------------------------------------------------------------------------->
 				<h5>
 					Contact lines
 					<div class="toggle-button">
@@ -37,6 +41,8 @@
 						<div class="toggle-option" data-toggle="contact" id="contact5">3</div>
 					</div>
 				</h5>
+<!----------------------------------------Horizontal Button --------------------------------------------------------------------------------------->
+
 				<h5>
 					Horizontal margin
 					<div class="toggle-button">
@@ -48,6 +54,8 @@
 						<div class="toggle-option" data-toggle="margin" id="margin6">6</div>
 					</div>
 				</h5>
+<!----------------------------------------Line spacing Button ------------------------------------------------------------------------------------->
+
 				<h5>
 					Line spacing
 					<div class="toggle-button">
@@ -59,16 +67,7 @@
 						<div class="toggle-option" data-toggle="line" id="line6">6</div>
 					</div>
 				</h5>
-				<h5>
-					Center column no.
-					<div class="toggle-button">
-						<div class="toggle-option multi-select" data-toggle="column" id="column1">1</div>
-						<div class="toggle-option multi-select" data-toggle="column" id="column2">2</div>
-						<div class="toggle-option multi-select" data-toggle="column" id="column3">3</div>
-						<div class="toggle-option multi-select" data-toggle="column" id="column4">4</div>
-					</div>
-				</h5>
-
+<!--------------------------------------------------Font type --------------------------------------------------------------------->
 				<br>
 
 					<h5>
@@ -80,6 +79,9 @@
 							<div class="toggle-option" data-toggle="font" id="fontDroid">4</div>
 						</div>
 					</h5>
+<!--------------------------------------------------Font type --------------------------------------------------------------------->
+
+
 					<h5>
 						Title case
 						<div class="toggle-button">
@@ -87,6 +89,8 @@
 							<div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
 						</div>
 					</h5>
+<!-------------------------------------------------- Style --------------------------------------------------------------------->
+
 					<h5>
 						Title style
 						<div class="toggle-button">
@@ -94,6 +98,8 @@
 							<div class="toggle-option" data-toggle="title" id="titleShaded">Shaded</div>
 						</div>
 					</h5>
+<!--------------------------------------------------Position --------------------------------------------------------------------->
+
 					<h5>
 						Title rule position
 						<div class="toggle-button">
@@ -101,6 +107,8 @@
 							<div class="toggle-option" data-toggle="rule" id="ruleBelow">Below title</div>
 						</div>
 					</h5>
+<!--------------------------------------------------Project layout --------------------------------------------------------------------->
+
 					<br>
 					<h5>
 						Projects layout
@@ -110,10 +118,13 @@
 						</div>
 					</h5>
 					<br>
+<!--------------------------Show/Hide sections -------------------------------------------------------------------------------------------------->
 
 				<h5>
 					<button class="btn btn-sm btn-block btn-primary" data-toggle="modal" data-target="#sectionToggleModal">Show/Hide sections</button>
 				</h5>
+
+<!--------------------------List & Points -------------------------------------------------------------------------------------------------->
 
 				<hr>
 
@@ -139,6 +150,8 @@
 			</div>
 
 		</div>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Right Container ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
 		<div class="col-sm-9 text-center" id="right">
@@ -498,10 +511,6 @@
 				<ul>
 					<li>Adjust margin in the Chrome's print dialog box. You may need it if a section is getting split between two pages. Print each page separately with different margins if needed.</li>
 					<li>If URLs or some stray text is being shown in print preview, disable the options "Include headers and footers","Include background graphics" etc in the print dialog box.</li>
-				</ul>
-				<h4><strong>Merge and compress PDFs</strong></h4>
-				<ul>
-					<li><a class="blue" target="_blank" href="http://www.pdfmerge.com/">pdfmerge.com/</a> is one of the best sites available for this task.</li>
 				</ul>
 			</div>
 
